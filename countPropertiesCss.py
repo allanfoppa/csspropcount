@@ -7,7 +7,7 @@ qtdProps = 0
 qtdPropsRep = 0
 
 for line in open('files/css/bulma.css', 'r'):
-    matchObj = re.search(".+;$", line)
+    matchObj = re.search("(.+;$|.+}$)", line)
     if matchObj:
         line = line.strip()
         words = line.split('; ')
